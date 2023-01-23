@@ -23,9 +23,9 @@ def third_task_function():
     return
 
 with DAG(
-    dag_id="My First CS 280 DAG",
+    dag_id="my_first_cs280_dag",
     schedule_interval="0 10 * * *",
-    start_date=pendulum.datetime(2023, 9, 1, tz="US/Pacific"),
+    start_date=pendulum.datetime(2023, 1, 1, tz="US/Pacific"),
     catchup=False,
 ) as dag:
     start_task = DummyOperator(task_id="start_task")
